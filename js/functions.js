@@ -1,10 +1,10 @@
 const checkLength = (string, maxLength) => string.length <= maxLength;
 
 const isPalindrome = (string) => {
-  string = string.replaceAll(' ','').toLowerCase();
+  const checkString = string.replaceAll(' ','').toLowerCase();
 
-  for (let i = 0; i <= Math.ceil(string.length / 2); i++) {
-    if (string.at(i) !== string.at(-i - 1)) {
+  for (let i = 0; i <= Math.ceil(checkString.length / 2); i++) {
+    if (checkString.at(i) !== checkString.at(-i - 1)) {
       return false;
     }
   }
